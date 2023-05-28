@@ -3,6 +3,7 @@ def ZC():
         expression = input("请输入算术表达式（输入'q'退出）：")
         if expression.lower() == 'q':
             break
+        expression = expression.replace(' ','')
         result, _ = E(expression, 0)
         if result and _ == len(expression):
             print("算术表达式语法正确")
